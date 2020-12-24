@@ -1,0 +1,79 @@
+.boxes__large {
+  padding: 0 $spacing;
+  transform: translateY(-3%);
+
+  .box__large {
+    @include box;
+    overflow: hidden;
+    border-radius: 3px 3px 12px 12px;
+    text-align: center;
+
+    &:hover {
+      @include boxhover;
+    }
+
+    .overlay--blue {
+      height: 3px;
+      background-color: $fb;
+    }
+
+    .overlay--light-blue {
+      height: 3px;
+      background-color: $tw;
+    }
+
+    .overlay--yellow-violet {
+      height: 3px;
+      background-image: $instagram;
+    }
+
+    .overlay--red {
+      height: 3px;
+      background-color: $yt;
+    }
+  }
+
+  .box__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $spacing;
+
+    .box__email {
+      margin: 0;
+      margin-left: $spacing - 12;
+      color: $lighttext;
+      font-weight: 700;
+    }
+  }
+
+  .number--bold {
+    font-weight: 700;
+    font-size: $fontsize + 30;
+    margin: 0;
+  }
+
+  .text--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $lighttext;
+  }
+
+  .content--green {
+    @include greencontent;
+    margin: 0;
+  }
+
+  .content--left {
+    padding: 0;
+  }
+
+  .content--red {
+    @include redcontent;
+    margin: 0;
+  }
+
+  .box__icon {
+    margin-right: $spacing - 12;
+  }
+}

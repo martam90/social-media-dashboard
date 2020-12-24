@@ -1,0 +1,75 @@
+$ffamily: "Inter", sans-serif;
+
+$fontsize: 14px;
+
+/* colors */
+
+$lime: hsl(163, 72%, 41%);
+$brightred: hsl(356, 69%, 56%);
+
+$fb: hsl(208, 92%, 53%);
+$tw: hsl(203, 89%, 53%);
+$instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$yt: hsl(348, 97%, 39%);
+
+/* dark theme */
+
+$darktheme: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+/* light theme */
+
+$lighttheme: hsl(230, 22%, 74%);
+
+/* dark colors */
+
+$darkblue: hsl(230, 17%, 14%); /* background */
+$topbg: hsl(232, 19%, 15%); /* top pattern BG*/
+$bluecard: hsl(228, 28%, 20%); /* card bg */
+$bluetext: hsl(228, 34%, 66%); /* text */
+$whitetext: hsl(0, 0%, 100%); /* text */
+
+/* light theme */
+
+$lightbg: hsl(0, 0%, 100%); /* BG */
+$paleblue: hsl(225, 100%, 98%); /*Top BG Pattern */
+$grayishblue: hsl(227, 47%, 96%); /* card BG*/
+$lighttext: hsl(228, 12%, 44%); /* text */
+$darkbluetext: hsl(230, 17%, 14%); /* text */
+
+$hoverdark: #333a56;
+
+/* spacing */
+
+$spacing: 20px;
+
+/* mixin title */
+
+@mixin boxtitle {
+  color: $lighttext;
+  font-weight: 700;
+  padding: $spacing - 10 0;
+}
+
+@mixin box {
+  background-color: $grayishblue;
+  margin-bottom: $spacing + 20;
+  transition: ease-in-out 300ms;
+}
+
+@mixin boxhover {
+  transition: ease-in-out 300ms;
+  background: $lighttheme;
+  cursor: pointer;
+}
+
+@mixin greencontent {
+  padding: 0;
+  color: $lime;
+  font-weight: 700;
+}
+
+@mixin redcontent {
+  padding: 0;
+  color: $brightred;
+  font-weight: 700;
+}

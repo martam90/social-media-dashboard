@@ -1,0 +1,34 @@
+.wrapper.dark-mode {
+  background-color: $darkblue;
+
+  .details {
+    background-color: $topbg;
+  }
+
+  .box__large {
+    background-color: $bluecard;
+
+    &:hover {
+      background-color: $hoverdark;
+    }
+  }
+
+  .box__small {
+    background-color: $bluecard;
+
+    &:hover {
+      background-color: $hoverdark;
+    }
+  }
+
+  .title--large,
+  .title--medium,
+  .number--bold {
+    color: $whitetext;
+  }
+
+  .item--circle {
+    float: left;
+    background-color: $topbg;
+  }
+}

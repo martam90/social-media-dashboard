@@ -1,0 +1,57 @@
+.boxes__small {
+  padding: 0 $spacing;
+
+  .title--medium {
+    @include boxtitle;
+    font-size: $fontsize + 10;
+
+    &.active {
+      color: $whitetext;
+    }
+  }
+
+  .box__small {
+    @include box;
+    border-radius: 12px;
+
+    &:hover {
+      @include boxhover;
+    }
+  }
+
+  .box__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $spacing - 5;
+
+    .title--small {
+      @include boxtitle;
+    }
+
+    .number--bold {
+      font-weight: 700;
+      font-size: $fontsize + 15;
+      margin: 0;
+    }
+
+    .content--green {
+      @include greencontent;
+      margin-left: $spacing - 15;
+    }
+
+    .content--red {
+      @include redcontent;
+      margin-left: $spacing - 15;
+    }
+
+    .content--left {
+      padding: 0;
+    }
+  }
+}
+
+.attribution {
+  text-align: center;
+  padding: $spacing;
+}

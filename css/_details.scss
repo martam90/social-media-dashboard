@@ -1,0 +1,53 @@
+.wrapper {
+  max-width: 768px;
+  background-color: $lightbg;
+}
+
+.details {
+  background: $paleblue;
+  padding: $spacing + 40 $spacing;
+  border-radius: 0 0 30px 30px;
+
+  .title--large {
+    margin: 0;
+
+    &.active {
+      color: $whitetext;
+    }
+  }
+
+  .title--small {
+    @include boxtitle;
+  }
+
+  .details__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid $lighttext;
+
+    .details__btn {
+      border-radius: 18px;
+      outline: none;
+      border: none;
+      width: 50px;
+      height: 25px;
+      background-color: rgb(173, 173, 173);
+      transition: background-image ease 300ms;
+
+      &:hover {
+        background-image: $darktheme;
+        cursor: pointer;
+        transition: background-image ease 300ms;
+      }
+    }
+
+    .item--circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: $paleblue;
+      float: right;
+    }
+  }
+}
