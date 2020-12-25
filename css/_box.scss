@@ -1,6 +1,5 @@
 .boxes__large {
-  padding: 0 $spacing;
-  transform: translateY(-3%);
+  padding: $spacing;
 
   .box__large {
     @include box;

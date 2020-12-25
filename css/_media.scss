@@ -1,14 +1,13 @@
 @media (min-width: 768px) {
-  .wrapper {
-    max-width: 1440px;
-
+  .content-overlay {
+    max-width: 1000px;
 
     .details {
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-radius: 0;
-      padding: $spacing + 60 $spacing;
+      padding: $spacing;
 
       .details__bottom {
         border: none;
@@ -29,7 +28,6 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     gap: $spacing;
-    transform: translateY(-30%);
 
     .box__large {
       margin-bottom: 0;

@@ -1,22 +1,30 @@
 .wrapper {
-  max-width: 768px;
-  background-color: $lightbg;
   position: relative;
 
-  &::before {
-    content: "";
+  .wrapper-bg {
+    background-color: $lightbg;
     position: absolute;
-    background-color: $paleblue;
     top: 0;
     left: 0;
     width: 100%;
-    height: 250px;
+    height: 100%;
     z-index: -1;
+
+    .wrapper-bg-light {
+      background-color: $paleblue;
+      height: 250px;
+    }
   }
 }
 
+.content-overlay {
+  z-index: 0;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
 .details {
-  padding: $spacing + 40 $spacing;
+  padding: $spacing;
   border-radius: 0 0 30px 30px;
 
   .title--large {
@@ -64,13 +72,5 @@
         transition: background-image ease 300ms;
       }
     }
-
-    /*.item--circle {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: $paleblue;
-      float: right;
-    }*/
   }
 }

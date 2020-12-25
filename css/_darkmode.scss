@@ -1,8 +1,10 @@
 .wrapper.dark-mode {
-  background-color: $darkblue;
+  .wrapper-bg {
+    background-color: $darkblue;
 
-  .details {
-    background-color: $topbg;
+    .wrapper-bg-light {
+      background-color: $topbg;
+    }
   }
 
   .box__large {

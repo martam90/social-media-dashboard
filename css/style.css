@@ -35,24 +35,32 @@ body {
 }
 
 .wrapper {
-  max-width: 768px;
-  background-color: white;
   position: relative;
 }
 
-.wrapper::before {
-  content: "";
+.wrapper .wrapper-bg {
+  background-color: white;
   position: absolute;
-  background-color: #f5f7ff;
   top: 0;
   left: 0;
   width: 100%;
-  height: 250px;
+  height: 100%;
   z-index: -1;
 }
 
+.wrapper .wrapper-bg .wrapper-bg-light {
+  background-color: #f5f7ff;
+  height: 250px;
+}
+
+.content-overlay {
+  z-index: 0;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
 .details {
-  padding: 60px 20px;
+  padding: 20px;
   border-radius: 0 0 30px 30px;
 }
 
@@ -81,13 +89,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-top: 1px solid #63687e;
-  /*.item--circle {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background-color: $paleblue;
-      float: right;
-    }*/
 }
 
 .details .details__bottom .details__btn {
@@ -122,9 +123,7 @@ body {
 }
 
 .boxes__large {
-  padding: 0 20px;
-  -webkit-transform: translateY(-3%);
-          transform: translateY(-3%);
+  padding: 20px;
 }
 
 .boxes__large .box__large {
@@ -297,11 +296,11 @@ body {
   padding: 20px;
 }
 
-.wrapper.dark-mode {
+.wrapper.dark-mode .wrapper-bg {
   background-color: #1e202a;
 }
 
-.wrapper.dark-mode .details {
+.wrapper.dark-mode .wrapper-bg .wrapper-bg-light {
   background-color: #1f212e;
 }
 
@@ -334,10 +333,10 @@ body {
 }
 
 @media (min-width: 768px) {
-  .wrapper {
-    max-width: 1440px;
+  .content-overlay {
+    max-width: 1000px;
   }
-  .wrapper .details {
+  .content-overlay .details {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -348,15 +347,15 @@ body {
         -ms-flex-align: center;
             align-items: center;
     border-radius: 0;
-    padding: 80px 20px;
+    padding: 20px;
   }
-  .wrapper .details .details__bottom {
+  .content-overlay .details .details__bottom {
     border: none;
   }
-  .wrapper .details .title--small {
+  .content-overlay .details .title--small {
     margin: 0;
   }
-  .wrapper .details .details__btn {
+  .content-overlay .details .details__btn {
     margin-left: 8px;
   }
   .boxes__large {
@@ -367,8 +366,6 @@ body {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     gap: 20px;
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
   }
   .boxes__large .box__large {
     margin-bottom: 0;
