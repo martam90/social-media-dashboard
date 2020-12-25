@@ -27,8 +27,9 @@
     color: $whitetext;
   }
 
-  .item--circle {
-    float: left;
+  .details__btn::after {
+    right: auto;
+    left: 3px;
     background-color: $topbg;
   }
 }

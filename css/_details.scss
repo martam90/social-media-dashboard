@@ -1,10 +1,21 @@
 .wrapper {
   max-width: 768px;
   background-color: $lightbg;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $paleblue;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    z-index: -1;
+  }
 }
 
 .details {
-  background: $paleblue;
   padding: $spacing + 40 $spacing;
   border-radius: 0 0 30px 30px;
 
@@ -27,13 +38,25 @@
     border-top: 1px solid $lighttext;
 
     .details__btn {
+      position: relative;
       border-radius: 18px;
       outline: none;
       border: none;
       width: 50px;
-      height: 25px;
+      height: 26px;
       background-color: rgb(173, 173, 173);
       transition: background-image ease 300ms;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $paleblue;
+        top: 3px;
+        right: 3px;
+      }
 
       &:hover {
         background-image: $darktheme;
@@ -42,12 +65,12 @@
       }
     }
 
-    .item--circle {
+    /*.item--circle {
       width: 20px;
       height: 20px;
       border-radius: 50%;
       background-color: $paleblue;
       float: right;
-    }
+    }*/
   }
 }
